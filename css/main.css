@@ -1,0 +1,236 @@
+body{
+  font-family: 'Alkalami', serif;
+  font-family: 'Cairo', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', serif;
+}
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+a.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: .5rem 1rem;
+  text-decoration: none;
+}
+a.main-btn:hover {
+  color:var(--section-color);
+  background-color: var(--yellow-color);
+}
+/* start navbar */
+.navbar{
+  background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link{
+  color: var(--section-color);
+  font-size: 20px;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+  color: var(--green-color);
+}
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+}
+.navbar .search svg{
+  color:var(--green-color);
+}
+.navbar .navbar-toggler{
+  color: white;
+  font-size: 20px;
+  border-color: white;
+}
+.navbar .navbar-toggler:focus{
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+  border-color: var(--green-color);
+}
+/* end navbar */
+/* start landing */
+.landing{
+  background-color: var(--dark-color);
+  height: calc(100vh - 78px);
+}
+/* End landing */
+/* start Feauture */
+.main-title::after{
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 3px;
+  background-color: var(--green-color);
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.feauture .container .row .icon-group {
+  height: 200px;
+}
+.feauture .container .row .icon-group svg{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.feauture .container .row .icon-group .number{
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.feauture .container .row .icon-group .icon{
+  color: var(--green-color);
+  font-size: 4rem;
+}
+.feauture .container .row h4{
+  color: var(--yellow-color);
+}
+/* End Feauture */
+/* start our work */
+.our-work{
+  background-color: var(--section-color);
+}
+.our-work ul .active{
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.our-work ul li{
+  cursor: pointer;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+}
+.our-work ul li:not(.active):hover{
+  color: var(--red-color);
+}
+.our-work .box{
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.our-work .box::before{
+  content: attr(data-work);
+  position: absolute;
+  width:calc(100% - 10px);
+  height:calc(100% - 10px);
+  background-color: #33d1cca4;
+  transition: .3s;
+  transform: translateX(calc(-100% - 10px));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.our-work .box:hover::before{
+  transform: translateX(0);
+}
+/* End our work */
+/* start team */
+.team{
+  background-color:var(--section-color);
+  padding: 5rem 0rem;
+}
+.team h4{
+  color: var(--yellow-color);
+  font-size: 45px;
+}
+.team .card-title{
+  background-color: var(--green-color);
+  padding: 15px 25px;
+  color: white;
+}
+/* End team */
+/* start teach */
+.teach .box{
+  position: relative;
+  transition: .3s;
+  cursor: pointer;
+}
+.teach .box::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0%;
+  height: 0%;
+  background-color: var(--section-color);
+  transform: translate(-50%,-50%);
+  transition: .3s;
+  z-index: -1;
+}
+.teach .box:hover::before{
+width: 100%;
+height: 100%;
+}
+/* end teach */
+/* start broject */
+.project{
+  background-color: var(--dark-color);
+}
+.project h4{
+  font-size: 35px;
+  color: white;
+}
+.blog .card-text:hover{
+  color: var(--red-color);
+  transition: .3s;
+}
+.blog .card p:last-of-type:hover{
+  color: var(--yellow-color);
+  transition: .3s;
+}
+/* end broject */
+/* start email */
+.email{
+  margin-top: 5rem;
+  padding:5rem 0rem;
+  background-color: var(--yellow-color);
+}
+.email input[type="email"]{
+  border: none;
+  border-bottom: 1px solid white;
+}
+.email input[type="email"]:focus{
+  outline: none;
+}
+.email input::placeholder{
+  color: white;
+  text-transform: capitalize;
+}
+.email input[type="submit"]{
+  background-color:var(--dark-color);
+  color: var(--yellow-color);
+}
+/* end email */
+/* start footer */
+.footer{
+  background-color: var(--dark-color);
+}
+.footer .Graphberry{
+  color: var(--green-color);
+  font-weight: bold;
+}
+.footer .Bondi-Inc{
+  color: var(--yellow-color);
+  font-weight: bold;
+}
+.footer ul li:hover{
+  color: var(--yellow-color);
+  transition: .3s;
+  cursor: pointer;
+}
+.footer h5:hover{
+  text-shadow: 1px 1px 1px white;
+  transition: .3s;
+}
+.icon a svg{
+  color: var(--yellow-color);
+}
+.footer p:hover{
+  color: var(--red-color);
+}
+/* End footer */
